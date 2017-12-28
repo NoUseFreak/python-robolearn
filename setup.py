@@ -5,7 +5,7 @@ setup(
     description='SDK for Robolearn',
     license='MIT',
     url='https://github.com/NoUseFreak/robolearn-python',
-    version='0.1.1',
+    version='0.1.4',
     author='Dries De Peuter',
     author_email='dries@nousefreak.be',
     maintainer='Dries De Peuter',
@@ -19,5 +19,4 @@ setup(
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7"
     ],
-    install_requires=['urllib2'],
 )
