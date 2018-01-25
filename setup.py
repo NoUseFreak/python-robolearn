@@ -1,17 +1,17 @@
 from setuptools import setup
 
 setup(
-    name='robolearn-python',
+    name='robolearnr-python',
     description='SDK for Robolearn',
     license='MIT',
-    url='https://github.com/NoUseFreak/robolearn-python',
+    url='https://github.com/NoUseFreak/robolearnr-python',
     version='0.1.4',
     author='Dries De Peuter',
     author_email='dries@nousefreak.be',
     maintainer='Dries De Peuter',
     maintainer_email='dries@nousefreak.be',
     long_description='',
-    packages=["robolearn"],
+    packages=["robolearnr"],
     zip_safe=False,
     classifiers=[
         "License :: OSI Approved :: MIT License",

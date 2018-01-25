@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 '''
-.. module:: robolearn
+.. module:: robolearnr
     :platform: Unix, Windows
     :synopsis: Python API to interact with Robolearn
     :noindex:
@@ -13,7 +13,7 @@ class Robolearn:
 
     def __init__(self, url='http://127.0.0.1:9000'):
         self.server = url
-        self.__info()
+        self.__server_rpc('info')
 
     def forward(self):
         self.__server_rpc('forward')
@@ -23,7 +23,7 @@ class Robolearn:
 
     def reset(self):
         self.__server_rpc('reset')
-        self.__info()
+        self.__server_rpc('info')
 
     def before_obstacle(self):
         return self.info['before_obstacle']
@@ -33,8 +33,4 @@ class Robolearn:
 
     def __server_rpc(self, action):
         response = urllib2.urlopen('%s/api/%s' % (self.server, action))
-        self.info = json.loads(response.read())
-
-    def __info(self):
-        response = urllib2.urlopen('%s/api/info' % self.server)
         self.info = json.loads(response.read())
