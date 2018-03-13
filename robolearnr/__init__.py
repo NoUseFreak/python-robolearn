@@ -33,4 +33,4 @@ class Robolearn:
 
     def __server_rpc(self, action):
         response = requests.get('%s/api/%s' % (self.server, action))
-        self.info = json.loads(response.read())
+        self.info = response.json()
