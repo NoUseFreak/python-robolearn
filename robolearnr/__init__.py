@@ -6,7 +6,7 @@
     :synopsis: Python API to interact with Robolearn
     :noindex:
 '''
-import urllib2
+import requests
 import json
 
 class Robolearn:
@@ -32,5 +32,5 @@ class Robolearn:
         return self.info['on_goal']
 
     def __server_rpc(self, action):
-        response = urllib2.urlopen('%s/api/%s' % (self.server, action))
-        self.info = json.loads(response.read())
+        response = requests.get('%s/api/%s' % (self.server, action))
+        self.info = response.json()
