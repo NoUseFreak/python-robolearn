@@ -23,7 +23,6 @@ class Robolearn:
 
     def reset(self):
         self.__server_rpc('reset')
-        self.__server_rpc('info')
 
     def before_obstacle(self):
         return self.info['before_obstacle']
